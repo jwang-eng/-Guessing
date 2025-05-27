@@ -1,0 +1,16 @@
+```mermaid
+flowchart TD
+    Start([Start])
+    Start --> Init[/"Initialize: Set min and max range (e.g., 1 to 100)"/]
+    Init --> Generate[/"Generate a random number within the range"/]
+    Generate --> PromptGuess[/"Prompt user for a guess"/]
+    PromptGuess --> ValidateInput{Is input a valid number?}
+    ValidateInput -- No --> InvalidInput[/"Display error and prompt again"/] --> PromptGuess
+    ValidateInput -- Yes --> CheckRange{Is the guess within range?}
+    CheckRange -- No --> OutOfRange[/"Display out-of-range message"/] --> PromptGuess
+    CheckRange -- Yes --> Compare{Is the guess correct?}
+    Compare -- Yes --> Correct[/"Display 'Correct! You win.'"/] --> End([End])
+    Compare -- No --> HigherLower{Is the guess too high?}
+    HigherLower -- Yes --> TooHigh[/"Display 'Too high! Try again.'"/] --> PromptGuess
+    HigherLower -- No --> TooLow[/"Display 'Too low! Try again.'"/] --> PromptGuess
+
