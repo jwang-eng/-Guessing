@@ -18,7 +18,7 @@ flowchart TD
 ```
 
 Start - The game begins.
-Initialize: Set min and max range 每 Set the minimum and maximum numbers the random value can be (e.g., 1 to 100).
+Initialize: Set min and max range 每 Set the minimum and maximum numbers the random value can be (1 to 100).
 Generate a random number within the range 每 The computer picks a hidden random number between the minimum and maximum.
 Prompt user for a guess - Ask the player to enter a number as their guess.
 Is input a valid number? 每 Check if the input is a number (not a letter or empty).
