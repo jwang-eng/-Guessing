@@ -15,6 +15,7 @@ flowchart TD
     Compare -- No --> HigherLower{Is the guess too high?}
     HigherLower -- Yes --> TooHigh[/"Display 'Too high! Try again.'"/] --> PromptGuess
     HigherLower -- No --> TooLow[/"Display 'Too low! Try again.'"/] --> PromptGuess
+```
 
 Start - The game begins.
 Initialize: Set min and max range ¨C Set the minimum and maximum numbers the random value can be (e.g., 1 to 100).
